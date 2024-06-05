@@ -1,4 +1,6 @@
 
+import Colas.Cola;
+import Colas.ColaGenerica;
 import Models.Pantalla;
 import Pilass.Pila;
 import Pilass.PilaGenerica;
@@ -31,9 +33,39 @@ public class App {
         pilaGenerica.push(new Pantalla("User Page", "/home/menu/user"));
         System.out.println("Estoy en la pantalla: \n\t------>"+pilaGenerica.peek().getNombre());
         System.out.println("Salir de la pantalla: \n\t------>"+pilaGenerica.pop().getNombre());
-
-
-        
+        System.out.println();
+        //IMPLEMENTACION DE COLAS
+        Cola cola=new Cola();
+        cola.addNode(10);
+        cola.addNode(20);
+        cola.addNode(30);
+        cola.addNode(40);
+        cola.addNode(50);
+        System.out.println("Tamaño es: "+cola.size());
+        System.out.println("Su primer elemento de la cola es "+cola.peek());//10
+        System.out.println("Su elemento en eliminado de la cola es "+cola.remove());//10
+        System.out.println("Su primer elemento de la cola es "+cola.peek());//20
+        System.out.println("Su elemento en eliminado de la cola es "+cola.remove());//20
+        System.out.println("Su primer elemento de la cola es "+cola.peek());//30
+        System.out.println("Su elemento en eliminado de la cola es "+cola.remove());//30
+        System.out.println("Su primer elemento de la cola es "+cola.peek());//40
+        System.out.println("Su elemento en eliminado de la cola es "+cola.remove());//40
+        System.out.println();
+        System.out.println("¿Su cola esta vacia?: "+(cola.isEmpty()? "Si":"No"));//true
+        System.out.println("Tamaño es: "+cola.size());
+        System.out.println();
+        //Implementacion de colas genericas
+        ColaGenerica<Pantalla> colaGenerica=new ColaGenerica<>();
+        colaGenerica.addNode(new Pantalla("Menu Page", "/menu"));
+        colaGenerica.addNode(new Pantalla("USERS", "/users"));
+        colaGenerica.addNode(new Pantalla("ESTUDIANTES", "/user"));
+        colaGenerica.addNode(new Pantalla("Escritorio", "/desktop"));
+        System.out.println("La cola tiene "+colaGenerica.size()+" elementos");
+        System.out.println("Esta en la Pantalla: \n\t------->"+colaGenerica.peek().getNombre());
+        System.out.println("Salio de la Pantalla: \n\t------->"+colaGenerica.remove().getNombre());
+        System.out.println("Esta en la Pantalla: \n\t------->"+colaGenerica.peek().getNombre());
+        System.out.println("Salio de la Pantalla: \n\t------->"+colaGenerica.remove().getNombre());
+        System.out.println("La cola tiene "+colaGenerica.size()+" elementos");
 
         
     }
