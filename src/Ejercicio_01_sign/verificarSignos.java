@@ -1,48 +1,63 @@
 package Ejercicio_01_sign;
 
 import java.util.EmptyStackException;
-import java.util.NoSuchElementException;
+
 
 public class verificarSignos {
-    private Node signo;
+    private Nodo top;
 
     public verificarSignos(){
-        signo=null;
-    }
-
-    //Push: Agregar elementos a la pila
-    public void push(String value){
-        Node nuevNode = new Node(value);
-        nuevNode.next = signo;
-        signo=nuevNode;
-    }
-
-    public String pop(){
-        if (signo==null) {
-            System.out.println("La pila esta vacia");
-            throw new EmptyStackException();
-        }else{
-            String valor = signo.value;
-            signo=signo.next;
-            return valor;
-        }
+        top = null;
 
     }
 
-    public String peek(){
-        if (signo==null) {
-            System.out.println("La pila esta vacia");
-            throw new EmptyStackException();
-        }
-        return signo.value;
-
+    public void agregarSignos(Character data){
+        Nodo nuevoNodo = new Nodo(data);
+        nuevoNodo.next = top;
+        top = nuevoNodo;
     }
-    
+
     public boolean isEmpty(){
-        return signo == null;
+        return top == null;
     }
 
-    public void verificar(){
+    public char pop(){
+        if (isEmpty()) {
+            System.out.println( "La pila esta vacia");
+            throw new EmptyStackException();
+        }
+        char data = top.value;
+        top = top.next;
+        return data;
         
     }
+
+    public char peek(){
+        if (isEmpty()) {
+            System.out.println( "La pila esta vacia");
+            throw new EmptyStackException();
+        }
+        System.out.println(top.value);
+        return top.value;
+    }
+
+    public boolean verificar(){
+        if (top.value=='['||top.value=='{'||top.value=='(') {
+            return false;
+        }
+        while (top.next!=null) {
+            if (peek()==']'|| peek()=='}'||peek()==')') {
+                char signo = peek();
+                pop();
+                if (peek()=='[') {
+                    
+                }
+            }
+        }
+
+        
+        return true;
+    }
+
+  
 }
