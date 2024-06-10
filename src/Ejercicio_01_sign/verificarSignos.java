@@ -50,16 +50,13 @@ public class verificarSignos {
                 char signo = peek();
                 pop();
 
-                    if (signo=='[') {
-                        verificarSignos = peek() == ']';
-
-                    }else if (signo=='{') {
-                        verificarSignos= peek() == '}';
-
-                    }else if (signo=='(') {
-                        verificarSignos= peek() == ')';
-
-                    }
+            switch (signo) {
+                case '[' -> verificarSignos = peek() == ']';
+                case '{' -> verificarSignos= peek() == '}';
+                case '(' -> verificarSignos= peek() == ')';
+                default -> {
+                }
+            }
                     if (signo == peek()) {
                         return false;
                     }
