@@ -49,7 +49,7 @@ public class verificarSignos {
         while (top.next!=null) {
                 char signo = peek();
                 pop();
-                if (signo!=']'|| signo!='}'|| signo != ')') {
+
                     if (signo=='[') {
                         verificarSignos = peek() == ']';
 
@@ -60,8 +60,11 @@ public class verificarSignos {
                         verificarSignos= peek() == ')';
 
                     }
+                    if (signo == peek()) {
+                        return false;
+                    }
 
-                }
+                
 
         }
 
