@@ -1,8 +1,9 @@
-package Pilass;
+package Materia.Pilass;
 
 
-import Models.NodoGenerico;
 import java.util.EmptyStackException;
+
+import Materia.Pilass.Models.NodoGenerico;
 
 public class PilaGenerica<T> {
     private NodoGenerico<T> top;

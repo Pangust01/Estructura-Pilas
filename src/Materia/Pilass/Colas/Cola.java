@@ -1,7 +1,8 @@
-package Colas;
+package Materia.Pilass.Colas;
 
 import java.util.NoSuchElementException;
-import Models.Node;
+
+import Materia.Pilass.Models.Node;
 
 public class Cola {
     private Node first;

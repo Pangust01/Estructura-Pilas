@@ -1,4 +1,4 @@
-package Models;
+package Materia.Pilass.Models;
 
 public class NodoGenerico <T>{
     public T data;

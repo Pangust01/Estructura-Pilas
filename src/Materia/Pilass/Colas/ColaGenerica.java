@@ -1,8 +1,8 @@
-package Colas;
+package Materia.Pilass.Colas;
 
 import java.util.NoSuchElementException;
 
-import Models.NodoGenerico;
+import Materia.Pilass.Models.NodoGenerico;
 
 public class ColaGenerica<T> {
     private NodoGenerico<T> first;
