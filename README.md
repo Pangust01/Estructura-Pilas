@@ -1,3 +1,4 @@
 ##Authors
 Daniel Guanga
-Here a new update about creates new class ("Colas", "Colasgenericas") and a package.
+Here a new update about creates new packages ("Materia", "ListaEnlazadas") and more class.
+
