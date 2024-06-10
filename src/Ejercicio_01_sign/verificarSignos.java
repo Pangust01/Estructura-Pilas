@@ -42,21 +42,31 @@ public class verificarSignos {
     }
 
     public boolean verificar(){
-        if (top.value=='['||top.value=='{'||top.value=='(') {
+        boolean verificarSignos=true;
+        if (top.value==']'||top.value=='}'||top.value==')') {
             return false;
         }
         while (top.next!=null) {
-            if (peek()==']'|| peek()=='}'||peek()==')') {
                 char signo = peek();
                 pop();
-                if (peek()=='[') {
-                    
+                if (signo!=']'|| signo!='}'|| signo != ')') {
+                    if (signo=='[') {
+                        verificarSignos = peek() == ']';
+
+                    }else if (signo=='{') {
+                        verificarSignos= peek() == '}';
+
+                    }else if (signo=='(') {
+                        verificarSignos= peek() == ')';
+
+                    }
+
                 }
-            }
+
         }
 
         
-        return true;
+        return verificarSignos;
     }
 
   
