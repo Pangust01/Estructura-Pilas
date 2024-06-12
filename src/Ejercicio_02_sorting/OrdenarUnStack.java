@@ -1,9 +1,6 @@
 package Ejercicio_02_sorting;
 
 import java.util.EmptyStackException;
-import java.util.Stack;
-
-import Ejercicio_02_sorting.Nodo;
 
 public class OrdenarUnStack {
 

@@ -1,12 +1,13 @@
-package Materia.ListaEnlazadas;
+package Ejercicio_03_linkedLists;
+
+import java.util.EmptyStackException;
 
 import Materia.Pilass.Models.Node;
 
-
-public class ListaEnlazada {
+public class ListaEnlazada2 {
     public Node head;
     public int tamanio;
-    public ListaEnlazada(){
+    public ListaEnlazada2(){
         head = null;
         tamanio=1;
     }
@@ -64,4 +65,5 @@ public class ListaEnlazada {
         }
         return tamanio;
     }
+
 }

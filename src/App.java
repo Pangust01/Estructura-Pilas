@@ -1,19 +1,19 @@
 import Materia.ListaEnlazadas.ListaEnlazada;
+import Materia.Pilass.Pila;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // System.out.println("Hello, World!");
-        // Pila pila1 = new Pila();
-        // pila1.push(10);
-        // pila1.push(20);
-        // pila1.push(30);
-        // pila1.push(40);
-        // System.out.println("Su elemento en la cima de la pila es: "+pila1.peek());
-        // System.out.println("Elemento retirado de la pila es: "+pila1.pop());
-        // System.out.println("Su elemento en la cima de la pila es: "+pila1.peek());
-        // System.out.println("Elemento retirado de la pila es: "+pila1.pop());
-        // System.out.println("Elemento retirado de la pila es: "+pila1.pop());
-        // System.out.println("Su elemento en la cima de la pila es: "+pila1.peek());
+        Pila pila1 = new Pila();
+        pila1.push(10);
+        pila1.push(20);
+        pila1.push(30);
+        pila1.push(40);
+        System.out.println("Su elemento en la cima de la pila es: "+pila1.peek());
+        System.out.println("Elemento retirado de la pila es: "+pila1.pop());
+        System.out.println("Su elemento en la cima de la pila es: "+pila1.peek());
+        System.out.println("Elemento retirado de la pila es: "+pila1.pop());
+        System.out.println("Elemento retirado de la pila es: "+pila1.pop());
+        System.out.println("Su elemento en la cima de la pila es: "+pila1.peek());
 
         // System.out.println();
 
@@ -62,19 +62,19 @@ public class App {
         // System.out.println("Salio de la Pantalla: \n\t------->"+colaGenerica.remove().getNombre());
         // System.out.println("La cola tiene "+colaGenerica.size()+" elementos");
 
-        ListaEnlazada lista = new ListaEnlazada();
-        lista.addNode(1);
-        lista.addNode(2);
-        lista.addNode(5);
-        lista.addNode(8);
-        lista.addNode(10);
-        System.out.println(lista.size());
-        lista.print();
-        lista.deleteNode(1);
-        lista.print();
-        lista.deleteNode(5);
-        lista.print();
-        System.out.println(lista.size());
+        // ListaEnlazada lista = new ListaEnlazada();
+        // lista.addNode(1);
+        // lista.addNode(2);
+        // lista.addNode(5);
+        // lista.addNode(8);
+        // lista.addNode(10);
+        // System.out.println(lista.size());
+        // lista.print();
+        // lista.deleteNode(1);
+        // lista.print();
+        // lista.deleteNode(5);
+        // lista.print();
+        // System.out.println(lista.size());
 
 
         
